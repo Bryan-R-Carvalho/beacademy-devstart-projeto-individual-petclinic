@@ -36,7 +36,7 @@ class OwnerController extends Controller
         return view('owners.create');
     }
     public function store(ValidateFormsRequest $request){
-        dd($request);
+        dd($request->all());
         $owner = $this->owner->store($request);
         $this->address->store($request, $owner);
 
