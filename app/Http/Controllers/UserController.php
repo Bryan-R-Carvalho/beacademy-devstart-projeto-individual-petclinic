@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreUpdateUserFormRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\UserType;
 
 class UserController extends Controller
 {
@@ -15,8 +14,7 @@ class UserController extends Controller
 
     public function index(){
         $users = User::all();
-        $usersType = UserType::all();
-        return view('users.index', compact('users', 'usersType'));
+        return view('users.index', compact('users'));
     }
     
 

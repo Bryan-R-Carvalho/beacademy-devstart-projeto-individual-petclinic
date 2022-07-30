@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('pets', function (Blueprint $table) {
@@ -23,17 +18,13 @@ return new class extends Migration
             $table->string('gender')->nullable();
             $table->float('weight')->nullable();
             $table->float('age')->nullable();
-            $table->foreignId('owner_id')->constrained('owners')->onDelete('cascade')->onUpdate('cascade');
-
+            $table->foreignId('owner_id')->constrained('id')->on('owners')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('pets');

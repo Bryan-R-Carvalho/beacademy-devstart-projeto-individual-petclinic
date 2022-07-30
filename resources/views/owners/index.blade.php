@@ -37,5 +37,8 @@
                 </tbody>
             </table>
         </div>
+        <div class="d-flex justify-content-center m-5">
+            {{ $owners->links('pagination::bootstrap-5') }}
+    </div>
     </div>
 @endsection

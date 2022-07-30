@@ -20,26 +20,25 @@
                         <th>ID</th>
                         <th>Nome</th>
                         <th>Email</th>
-                        <th>Ações</th>
+                        <th>Telefone</th>
+                        <th>Rua</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>CEP</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($owner->pets as $pet)
                     <tr>
-                        <td>{{ $pet->id }}</td>
-                        <td>{{ $pet->name }}</td>
-                        <td>{{ $pet->species }}</td>
-                        <td>{{$pet->breed}}</td>
-                        <td>{{$pet->color}}</td>
-                        <td>{{$pet->gender}}</td>
-                        <td>{{$pet->weight}}</td>
-                        <td>{{$pet->age}}</td>
-
-                        <td>
-                            <a href="{{ route('owners.show', $owner->id) }}" class="btn btn-info">Detalhes</a>
-                        </td>
+                        <td>{{ $owner->id }}</td>
+                        <td>{{ $owner->name }}</td>
+                        <td>{{ $owner->email }}</td>
+                        <td>{{ $owner->phone}}</td>
+                        <td>{{ $owner->street}}</td>
+                        <td>{{ $owner->city}}</td>
+                        <td>{{ $owner->state}}</td>
+                        <td>{{ $owner->postal_code}}</td>
                     </tr>
-                    @endforeach
                 </tbody>
             </table>
         </div>

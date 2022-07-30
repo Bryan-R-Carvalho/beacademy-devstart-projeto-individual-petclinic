@@ -1,5 +1,5 @@
 <!-- create a user form-->
-@extends('template.users')
+@extends('template.layout')
 @section('title', 'usuarios')
 @section('body')
 <div class="container">

@@ -1,7 +1,7 @@
 @extends("template.layout")
 @section('title', 'Cadastrar tutor')
 @section('body')
-<div class="container">
+<div class="container w-50">
     <div class="row">
         <div class="col-12">
             <h1>Cadastrar tutor</h1>
@@ -25,8 +25,8 @@
                     <input type="text" name="phone" id="phone" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="address">Endereço</label>
-                    <input type="text" name="address" id="address" class="form-control" required>
+                    <label for="street">Endereço</label>
+                    <input type="text" name="street" id="street" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="city">Cidade</label>
