@@ -12,12 +12,19 @@ Route::get('/', function () {
 });
 
 Route::controller(OwnerController::class)->group(function(){
-    Route::post('/owners', "store")->name("owners.store");
-    Route::get('/owners', "index")->name("owners.index");
     Route::get('/owners/create', "create")->name("owners.create");
+    Route::post('/owners', "store")->name("owners.store");
+    Route::get('/owners/{id}/edit', "edit")->name("owners.edit");
+    Route::put('/owners/{id}', "update")->name("owners.update");
+    Route::get('/owners', "index")->name("owners.index");
+    Route::get('/owners/{id}', "show")->name("owners.show");
     
-    Route::get('/owners/{id}/pets', 'show')->name('owners.show');
 });
-
-//Route::get('/owners/{id}/pets', [PetController::class, 'show'])->name('owners.show');
+Route::controller(PetController::class)->group(function(){
+    Route::get('/owners/{id}/pets/create', "create")->name("pets.create");
+    Route::post('/owners/{id}/pets', "store")->name("pets.store");
+    Route::get('/owners/{id}/pets/edit', "edit")->name("pets.edit");
+    Route::put('/owners/{id}/pets', "update")->name("pets.update");
+    Route::get('/owners/{id}/pets', "show")->name("pets.show");
+});
 Route::get('/users', [UserController::class, 'index'])->name('users.index');

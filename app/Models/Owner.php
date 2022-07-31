@@ -24,17 +24,4 @@ class Owner extends Model
     {
         return $this->hasMany(Pet::class);
     }
-
-    public function store($data){
-        $owner = new Owner;
-        $this->name = $data->name;
-        $this->email = $data->email;
-        $this->phone = $data->phone;
-        $this->street = $data->street;
-        $this->postal_code = $data->postal_code;
-        $this->city = $data->city;
-        $this->state = $data->state;
-        $this->save();
-        return $owner->id;
-    }
 }

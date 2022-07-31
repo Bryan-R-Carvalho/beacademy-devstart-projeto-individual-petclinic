@@ -40,9 +40,9 @@
                     <label for="postal_code">CEP</label>
                     <input type="text" name="postal_code" id="postal_code" class="form-control" required>
                 </div>
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
-                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
             </form>
-        </div>
+        </div>    
     </div>
+</div>
 @endsection

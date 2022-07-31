@@ -27,4 +27,5 @@ class Pet extends Model
     {
         return $this->belongsTo(Owner::class);
     }
+    
 }
