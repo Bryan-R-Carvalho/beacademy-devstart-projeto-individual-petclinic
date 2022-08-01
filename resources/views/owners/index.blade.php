@@ -4,7 +4,7 @@
 <div class="container">
     <h1>Tutores</h1>
     <a href="{{route('owners.create')}}" class="btn btn-primary">Novo tutor</a>
-    <table class="table table-striped">
+    <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
                 <th>ID</th>
