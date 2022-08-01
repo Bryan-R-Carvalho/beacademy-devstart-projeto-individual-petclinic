@@ -3,8 +3,8 @@
 @section('body')
 <div class="container">
     <h1>Pets do {{$owner->name}}</h1>
-    <a href="{{ route('owners.create', $owner->id) }}" class="btn btn-primary">Novo pet</a>
-    <table class="table table-striped">
+    <a href="{{ route('pets.create', $owner->id) }}" class="btn btn-primary">Novo pet</a>
+    <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
                 <th>ID</th>

@@ -30,14 +30,18 @@ class PetController extends Controller
         $owner = Owner::findOrFail($id);
         return view('pets.create', compact('owner'));
     }
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
-        $this->pet->store($request);
-        return redirect()->route('pets.show', $request->owner_id);
+        $data = $request->all();
+        $data['owner_id'] = $id;
+        $this->pet->create($data);
+        return redirect()->route('pets.show', $id);
     }
     public function edit($id)
     {
-        //
+        $owner = Owner::findOrFail($id);
+        $pet = Pet::findOrFail($id);
+        return view('pets.edit', compact('owner','pet'));
     }
     public function update(Request $request, $id)
     {

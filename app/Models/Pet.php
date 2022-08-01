@@ -27,5 +27,8 @@ class Pet extends Model
     {
         return $this->belongsTo(Owner::class);
     }
-    
+    public function VaccinePet()
+    {
+        return $this->hasMany(VaccinePet::class);
+    }
 }
