@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
     PetController,
     OwnerController,
-    UserController
+    UserController,
+    VaccineController
 };
 
 Route::get('/', function () {
@@ -27,4 +28,13 @@ Route::controller(PetController::class)->group(function(){
     Route::put('/owners/{id}/pets', "update")->name("pets.update");
     Route::get('/owners/{id}/pets', "show")->name("pets.show");
 });
+Route::controller(VaccineController::class)->group(function(){
+    Route::get('/vaccines/create', "create")->name("vaccines.create");
+    Route::post('/vaccines', "store")->name("vaccines.store");
+    Route::get('/vaccines/{id}/edit', "edit")->name("vaccines.edit");
+    Route::put('/vaccines', "update")->name("vaccines.update");
+    Route::get('/vaccines', "index")->name("vaccines.index");
+    // Route::get('/owners/{id}/pets', "show")->name("vaccines.show");
+});
+
 Route::get('/users', [UserController::class, 'index'])->name('users.index');
