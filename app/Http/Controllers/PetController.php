@@ -39,13 +39,14 @@ class PetController extends Controller
     }
     public function edit($id)
     {
-        $owner = Owner::findOrFail($id);
         $pet = Pet::findOrFail($id);
-        return view('pets.edit', compact('owner','pet'));
+        return view('pets.edit', compact('pet'));
     }
     public function update(Request $request, $id)
     {
-        //
+        $pet = Pet::findOrFail($id);
+        $pet->update($request->all());
+        return redirect()->route('pets.show', $id);
     }
     public function destroy($id)
     {

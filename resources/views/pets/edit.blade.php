@@ -3,7 +3,7 @@
 @section('body')
 <div class="container w-50">
     <h1>Cadastrar pet do {{$owner->name}} </h1>
-    <form action="{{route('pets.update', $owner->id)}}" method="POST">
+    <form action="{{route('pets.update', $pet->id)}}" method="POST">
     @method('PUT')
     @csrf
         <div class="form-group">

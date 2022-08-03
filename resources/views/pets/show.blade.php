@@ -32,7 +32,7 @@
                 <td>{{ $pet->weight }}</td>
                 <td>{{ $pet->age }}</td>
                 <td>
-                    <a href="{{ route('pets.edit', $pet->id) }}" class="btn btn-warning">Editar</a>
+                    <a href="{{ route('pets.edit', [$owner->id, $pet->id] ) }}" class="btn btn-warning">Editar</a>
                 </td>
             </tr>
             @endforeach
