@@ -1,8 +1,8 @@
 @extends("template.layout")
-@section('title', 'Pet do ' .$owner->name)
+@section('title', 'Editar pet ')
 @section('body')
 <div class="container w-50">
-    <h1>Cadastrar pet do {{$owner->name}} </h1>
+    <h1>Editar pet {{$pet->name}}</h1>
     <form action="{{route('pets.update', $pet->id)}}" method="POST">
     @method('PUT')
     @csrf
@@ -51,7 +51,7 @@
             <label class="form-check-label" for="gender">Femea</label>
         </div>
         <br>
-        <a href="{{ route('pets.show', $owner->id) }}" class="btn btn-primary mt-2 mb-5">Voltar</a>
+        
         <button type="submit" class="btn btn-success mt-2 mb-5">Cadastrar</button>
         
     </form>
