@@ -35,6 +35,7 @@
                     <td>
                         <a href="{{ route('pets.edit', [$owner->id, $pet->id] ) }}" class="btn btn-warning">Editar</a>
                         <button type="button" data-toggle="modal" data-target="{{ '#JanelaModal'.$pet->id }}" class="btn btn-info">Detalhes</button>
+                        <a href="{{ route('vaccinepet.show', $pet->id ) }}" class="btn btn-primary">Vacinas</a>
                     </td>
                 </tr>
                 @endforeach
@@ -52,7 +53,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <p>pet: {{ $pet->details }}</p> 
+                                <p>{{ $pet->details }}</p> 
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -63,6 +64,5 @@
                 </div>
             @endforeach
         </section>
-    
 </main>
 @endsection

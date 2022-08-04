@@ -35,58 +35,6 @@
             </div>
                 <a href="{{ route('vaccinepet.index') }}" class="btn btn-primary mt-2 mb-5">Voltar</a>
                 <button type="submit" class="btn btn-success mt-2 mb-5">Cadastrar</button>
-        <!-- <form action="{{ route('vaccinepet.store') }}" method="POST">
-            @csrf
-            <div class="mb-3">
-            <select name="vaccine_id" class="form-select">
-                <option>Selecione uma vacina</option>
-                @foreach($vaccines as $vaccine)
-                    <option value="{{ $vaccine->id }}">{{ $vaccine->name }}</option>
-                @endforeach
-            </select>
-            </div>
-
-            <div class="mb-3">
-                <select name="pet_id" class="form-select">
-                    <option>Selecione um pet</option>
-                    @foreach($pets as $pet)
-                        <option value="{{ $pet->id }}">{{ $pet->name }}</option>
-                    @endforeach
-                </select>
-            </div>
-            
-            <div class="mb-3">
-                <label for="date">Data</label>
-                <input type="date" name="date" id="date" class="form-control" required>
-            </div>
-
-            <a href="{{ route('vaccinepet.index') }}" class="btn btn-primary mt-2 mb-5">Voltar</a>
-            <button type="submit" class="btn btn-success mt-2 mb-5">Cadastrar</button> -->
-
-            <!-- <div class="form-group">
-                <label for="vaccines">Vacina</label>
-                <select name="vaccines" class="form-control" required>
-                    <option value="">Selecione uma vacina</option>
-                    @foreach($vaccines as $vaccine)
-                        <option value="{{$vaccine->id}}">{{$vaccine->name}}</option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="pets">Pet</label>
-                <select name="pets" class="form-control" required>
-                    <option value="">Selecione um pet</option>
-                    @foreach($pets as $pet)
-                        <option value="{{$pet->id}}">{{$pet->name}}</option>
-                    @endforeach
-                </select>
-                dd($pets->id);
-            </div>
-            <div class="form-group">
-                <label for="date">Data</label>
-                <input type="date" name="date" id="date" class="form-control" required>
-            </div>
-            <a href="{{ route('vaccinepet.index') }}" class="btn btn-primary mt-2 mb-5">Voltar</a>
-            <button type="submit" class="btn btn-success mt-2 mb-5">Cadastrar</button> -->
+        
         </form>
 @endsection

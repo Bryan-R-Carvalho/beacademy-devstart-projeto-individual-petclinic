@@ -34,11 +34,11 @@
                 </div>
                 <div class="form-group">
                     <label for="state">Estado</label>
-                    <input type="text" name="state" id="state" class="form-control" required>
+                    <input type="text" name="state" id="state" class="form-control" maxlength="2" required>
                 </div>
                 <div class="form-group">
                     <label for="postal_code">CEP</label>
-                    <input type="text" name="postal_code" id="postal_code" class="form-control" required>
+                    <input type="text" name="postal_code" id="postal_code" class="form-control" maxlength="8" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
             </form>
