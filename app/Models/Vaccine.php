@@ -17,7 +17,7 @@ class Vaccine extends Model
         'created_at',
         'updated_at'
     ];
-    public function VaccinePet()
+    public function vaccinePet()
     {
         return $this->hasMany(VaccinePet::class);
     }

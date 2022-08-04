@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('gender')->nullable();
             $table->float('weight')->nullable();
             $table->float('age')->nullable();
+            $table->string('details')->nullable();
             $table->foreignId('owner_id')->constrained('id')->on('owners')
             ->onDelete('cascade')
             ->onUpdate('cascade');

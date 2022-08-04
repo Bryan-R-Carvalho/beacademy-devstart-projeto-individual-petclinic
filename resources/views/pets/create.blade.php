@@ -51,6 +51,10 @@
             <label class="form-check-label" for="gender">Femea</label>
         </div>
         <br>
+        <div class="form-group mb-3">
+            <label for="details">Detalhes extra</label>
+            <textarea class="form-control" name="details" id="details" placeholder="Detalhes extra do pet" rows="3"></textarea>
+        </div>
         <button type="submit" class="btn btn-primary mt-2 mb-5">Cadastrar</button>
     </form>
 </div>

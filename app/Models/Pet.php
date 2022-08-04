@@ -18,16 +18,17 @@ class Pet extends Model
         'hair_type',
         'weight',
         'gender',
+        'details',
         'owner_id',
         'created_at',
         'updated_at'
     ];
 
-    public function User()
+    public function user()
     {
         return $this->belongsTo(Owner::class);
     }
-    public function VaccinePet()
+    public function vaccinePet()
     {
         return $this->hasMany(VaccinePet::class);
     }

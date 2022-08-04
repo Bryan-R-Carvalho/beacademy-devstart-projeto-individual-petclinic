@@ -28,8 +28,8 @@
              @endforeach
         </tbody>
     </table>
-    <div class="d-flex justify-content-center m-5">
-        {{ $owners->links('pagination::bootstrap-5') }}
+    <div class="d-flex justify-content-center mt-5">
+        {{ $owners->links('pagination::bootstrap-4') }}
     </div>
 </div>
 @endsection
