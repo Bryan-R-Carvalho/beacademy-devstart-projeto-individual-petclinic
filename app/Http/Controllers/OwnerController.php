@@ -45,6 +45,6 @@ class OwnerController extends Controller
     public function update(Request $request, $id){
         $owner = Owner::findOrFail($id);
         $owner->update($request->all());
-        return redirect()->route('owners.show', $id);
+        return redirect()->route('owners.index');
     }
 }

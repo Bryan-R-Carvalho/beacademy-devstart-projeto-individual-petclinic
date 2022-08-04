@@ -44,12 +44,13 @@ class VaccinePetController extends Controller
         }
         public function show($id)
         {
-            //
+            $pet = $this->pet->find($id);
+            return view('vaccinepet.show', compact('pet'));
         }
         public function edit($id)
         {
-            $vaccine = Vaccine::findOrFail($id);
-            return view('vaccines.edit', compact('vaccine'));
+            $vaccinepet = VaccinePet::findOrFail($id);
+            return view('vaccinespet.edit', compact('vaccinepet'));
         }
         public function update(Request $request, $id)
         {

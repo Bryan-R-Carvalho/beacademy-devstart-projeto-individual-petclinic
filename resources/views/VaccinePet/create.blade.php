@@ -33,7 +33,7 @@
                 <label for="date">Data</label>
                 <input type="date" name="date" id="date" class="form-control" required>
             </div>
-                <a href="{{ route('vaccinepet.index') }}" class="btn btn-primary mt-2 mb-5">Voltar</a>
+
                 <button type="submit" class="btn btn-success mt-2 mb-5">Cadastrar</button>
         
         </form>

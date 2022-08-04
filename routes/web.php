@@ -18,7 +18,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/owners/{id}/edit', [OwnerController::class, "edit"])->name("owners.edit");
     Route::put('/owners/{id}', [OwnerController::class, "update"])->name("owners.update");
     Route::get('/owners', [OwnerController::class, "index"])->name("owners.index");
-    Route::get('/owners/{id}', [OwnerController::class, "show"])->name("owners.show");
 
     Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
     Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
@@ -34,13 +33,15 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/owners/{id}/pets', [PetController::class, "update"])->name("pets.update");
     Route::get('/owners/{id}/pets', [PetController::class, "show"])->name("pets.show");
 
+    
     Route::get('/vaxpet/create', [VaccinePetController::class, "create"])->name("vaccinepet.create");
     Route::post('/vaxpet', [VaccinePetController::class, "store"])->name("vaccinepet.store");
     Route::get('/vaxpet/{id}/edit', [VaccinePetController::class, "edit"])->name("vaccinepet.edit");
     Route::put('/vaxpet', [VaccinePetController::class, "update"])->name("vaccinepet.update");
-    Route::get('/vaxpet', [VaccinePetController::class, "index"])->name("vaccinepet.index");
     Route::get('/vaxpet/{id}', [VaccinePetController::class, "show"])->name("vaccinepet.show");
+    Route::get('/vaxpet', [VaccinePetController::class, "index"])->name("vaccinepet.index");
 
+    
     Route::get('/vaccines/create', [VaccineController::class, "create"])->name("vaccines.create");
     Route::post('/vaccines', [VaccineController::class, "store"])->name("vaccines.store");
     Route::get('/vaccines/{id}/edit', [VaccineController::class, "edit"])->name("vaccines.edit");

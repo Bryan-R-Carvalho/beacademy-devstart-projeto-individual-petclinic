@@ -12,6 +12,7 @@
     <header class="container-fluid header p-0">
         <nav class="navbar navbar-expand-sm navbar-light bg-success py-3">
             <a class="navbar-brand p-0" href="/"><img src="{{ asset('icon.png') }}" alt="logo" width="30px" height="30px"></a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -39,9 +40,9 @@
                             <a class="nav-link text-white" href="#">{{Auth::user()->name}}</a>
                         </li>
                         @if(Auth::user()->is_admin == 1)
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link text-white" href="#">Dashboard</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="/vaxpet/create">Medicar</a>
                             </li>
@@ -72,14 +73,10 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
     
-    <footer class="container-fluid footer p-2 bg-success">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <p class="text-center text-white">&copy; 2020 - VaxPet</p>
-            </div>
+    <footer class="fixed-bottom p-0 m-0 bg-success">
+        <div class="text-center">
+            <p class=" text-white">Copyright &copy; 2022 - PetClinic</p>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>

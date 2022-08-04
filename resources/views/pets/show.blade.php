@@ -35,7 +35,7 @@
                     <td>
                         <a href="{{ route('pets.edit', [$owner->id, $pet->id] ) }}" class="btn btn-warning">Editar</a>
                         <button type="button" data-toggle="modal" data-target="{{ '#JanelaModal'.$pet->id }}" class="btn btn-info">Detalhes</button>
-                        <a href="{{ route('vaccinepet.show', $pet->id ) }}" class="btn btn-primary">Vacinas</a>
+                        <a href="{{ route('vaccinepet.show', $pet->id) }}" class="btn btn-primary">Vacinas</a>
                     </td>
                 </tr>
                 @endforeach

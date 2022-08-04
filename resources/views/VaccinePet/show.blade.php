@@ -4,20 +4,19 @@
     <div class="container w-50">
         <h1>Vacinas do {{$pet->name}}</h1>
         <?php
-            $pets = DB::table('vaccines_pets')->where('pet_id', $pet->id)->get();
+            $vaccines = DB::table('vaccines_pets')
+                ->join('vaccines', 'vaccines_pets.vaccine_id', '=', 'vaccines.id')
+                ->select('vaccines.name', 'vaccines_pets.date')
+                ->where('vaccines_pets.pet_id', '=', $pet->id)
+                ->get();
         ?>
-        @foreach($pets as $pet)
+        @foreach($vaccines as $vax)
             <div class="card">
                 <div class="card-body">
-                    <strong>Data: </strong> <p class="card-title">{{ $pet->date }}</p>
-                    <strong>Medicamento:</strong><p class="card-text">{{ $pet->vaccine->name }}</p>
+                    <strong>Data: </strong> <p class="card-title">{{ $vax->date }}</p>
+                    <strong>Medicamento:</strong><p class="card-text">{{ $vax->name }}</p>
                 </div>
             </div>
         @endforeach
-        <a href="{{ route('vaccinepet.index') }}" class="btn btn-primary mt-2 mb-5">Voltar</a>
-        
-        <div class="d-flex justify-content-center mt-5">
-            {{ $vaccines->links('pagination::bootstrap-4') }}
-        </div>
     </div>
 @endsection
