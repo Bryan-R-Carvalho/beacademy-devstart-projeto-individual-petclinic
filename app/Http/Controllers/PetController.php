@@ -9,6 +9,8 @@ use App\Models\{
 };
 class PetController extends Controller
 {
+    protected $owner;
+    protected $pet;
     public function __construct(Owner $owner, Pet $pet)
     {
         $this->owner = new $owner;

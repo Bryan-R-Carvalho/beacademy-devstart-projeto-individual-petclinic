@@ -7,7 +7,7 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    private $user;
+    private $model;
     public function __construct(User $user)
     {
         $this->model = $user;
