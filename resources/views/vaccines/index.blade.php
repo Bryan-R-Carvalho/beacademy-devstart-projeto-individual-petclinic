@@ -9,7 +9,14 @@
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
         </div>
     @endif
-    <a href="{{route('vaccines.create')}}" class="btn btn-primary">Cadastrar vacina</a>
+    
+    <div class="row py-3">
+        <a href="{{route('vaccines.create')}}" class="btn btn-primary">Cadastrar vacina</a>
+        <form id="search" action="{{ route('vaccines.index') }}" method="GET" class="form-inline">
+            <input type="text" class=" form-control" name="search" placeholder="Buscar por nome">
+            <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+        </form>
+    </div> 
     <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>

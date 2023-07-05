@@ -19,6 +19,7 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/owners/{id}', [OwnerController::class, "update"])->name("owners.update");
     Route::get('/owners', [OwnerController::class, "index"])->name("owners.index");
 
+
     Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
     Route::put('/users/{id}', [UserController::class, 'update'])->name('users.update');
     Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');

@@ -4,7 +4,14 @@
 <main>
     <div class="container">
         <h1>Tutores</h1>
-        <a href="{{route('owners.create')}}" class="btn btn-primary">Novo tutor</a>
+        <div class="row py-3">
+            <a href="{{route('owners.create')}}" class="btn btn-primary">Novo tutor</a>
+            <form id="search" action="{{ route('owners.index') }}" method="GET" class="form-inline">
+                <input type="text" class=" form-control" name="search" placeholder="Buscar por nome">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </form>
+        </div> 
+        
         <table class="table table-striped table-bordered table-hover">
             <thead>
                 <tr>

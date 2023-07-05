@@ -19,8 +19,16 @@ class VaccineController extends Controller
         $this->pet = $pet;
     }
 
-    public function index()
+    public function index(Request $request)
     {
+        if($request->input('search')){
+            $search = $request->input('search');
+            $vaccines = $this->vaccine->where('name', 'ILIKE', "$search%")
+            ->orWhere('brand', 'ILIKE', "$search%")
+            ->paginate(6);
+            
+            return view('vaccines.index', compact('vaccines'));
+        }
         $vaccines = $this->vaccine->paginate(6);
         return view('vaccines.index', compact('vaccines'));
     }

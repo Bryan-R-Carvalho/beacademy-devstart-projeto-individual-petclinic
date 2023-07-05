@@ -20,8 +20,16 @@ class OwnerController extends Controller
         $this->owner = $owner;
         $this->pet = $pet;
     }
-    public function index()
+    public function index(Request $request)
     {
+        if($request->input('search')){
+            $search = $request->input('search');
+            $owners = $this->owner->where('name', 'ILIKE', "$search%")
+            ->paginate(6);
+
+            return view('owners.index', compact('owners'));
+        }
+
         $owners = $this->owner->paginate(6);
         return view('owners.index', compact('owners'));
     }
