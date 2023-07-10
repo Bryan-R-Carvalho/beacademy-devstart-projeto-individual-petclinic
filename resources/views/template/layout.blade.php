@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
-<body  style="background-color: #fefefe">
+<body  style="background-color: #f7f7f7">
     <header class="container-fluid header p-0">
         <nav class="navbar navbar-expand-sm navbar-light bg-success py-3">
             <a class="navbar-brand p-0" href="/"><img src="{{ asset('icon.png') }}" alt="logo" width="30px" height="30px"></a>
@@ -75,7 +75,7 @@
     
     <footer class="fixed-bottom p-0 m-0 bg-success">
         <div class="text-center">
-            <p class=" text-white">Copyright &copy; 2022 - PetClinic</p>
+            <p class=" text-white">Copyright &copy; 2023 - PetClinic</p>
         </div>
     </footer>
 </body>
